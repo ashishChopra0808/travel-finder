@@ -36,7 +36,6 @@ import { SRLWrapper } from "simple-react-lightbox";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import { packagesData } from "../../../data/PackageDetails"
 
 class PackageDetails extends Component {
     constructor(props) {
@@ -44,7 +43,6 @@ class PackageDetails extends Component {
         this.state = {
             startDate:new Date(),
         };
-        console.log(packagesData);
     }
     changeDatepickerHandeller=(date)=>{
         this.setState({ startDate: date });
