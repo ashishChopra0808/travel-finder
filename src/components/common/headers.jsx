@@ -131,7 +131,7 @@ class Headers extends Component {
                             <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                 <nav className="main-nav">
                                     <div className="navber-logo-sm">
-                                        <img src={secondLogo} alt="" className="img-fluid" />
+                                        <img src={secondLogo} alt="" className="img-fluid" width="100" />
                                     </div>
                                     <ul>
                                         {/*<li className="has-child-menu">
@@ -147,7 +147,7 @@ class Headers extends Component {
                                             </ul>
                                         </li>*/}
                                         <li>
-                                            <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/`} onClick={this.scrollTop} >Home</NavLink>
+                                            <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/home`} onClick={this.scrollTop} >Home</NavLink>
                                         </li>
                                         <li>
                                             <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/package`} onClick={this.scrollTop} >Travel</NavLink>

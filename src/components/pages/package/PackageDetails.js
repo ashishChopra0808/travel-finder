@@ -35,7 +35,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { packagesData }  from "../../../json/PackageDetails";
 
 class PackageDetails extends Component {
     constructor(props) {
@@ -61,6 +61,8 @@ class PackageDetails extends Component {
     }
   render() {
     const startDate =this.state.startDate;
+    let slug = window.location.href.split("/").pop();
+    let currentPackage = packagesData.filter(el => el.slug === slug)
     return (
         <>
             {/* ===============  breadcrumb area start =============== */}
@@ -93,13 +95,13 @@ class PackageDetails extends Component {
                                 </div>
                                 <div className="package-header">
                                     <div className="package-title">
-                                        <h3>Western Express Northbound</h3>
-                                        <strong><i className="flaticon-arrival" />
+                                        <h3>{currentPackage[0].title}</h3>
+                                        {/*<strong><i className="flaticon-arrival" />
                                             Mount Dtna, Spain
-                                        </strong>
+                                        </strong>*/}
                                     </div>
                                     <div className="pd-review">
-                                        <p>Excellent</p>
+                                        {/*<p>Excellent</p>
                                         <ul>
                                             <li><i className="bx bxs-star" /></li>
                                             <li><i className="bx bxs-star" /></li>
@@ -107,10 +109,10 @@ class PackageDetails extends Component {
                                             <li><i className="bx bxs-star" /></li>
                                             <li><i className="bx bx-star" /></li>
                                         </ul>
-                                        <p>800 Review</p>
+                                        <p>800 Review</p>*/}
                                     </div>
                                 </div>
-                                <div className="p-short-info">
+                                {/*<div className="p-short-info">
                                     <div className="single-info">
                                         <i className="flaticon-clock" />
                                         <div className="info-texts">
@@ -139,7 +141,7 @@ class PackageDetails extends Component {
                                             <p>Any Language</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*/}
                                 <div className="package-tab">
                                     {/*<ul className="nav nav-pills" id="pills-tab" role="tablist">
                                         <li className="nav-item" role="presentation">
@@ -409,101 +411,33 @@ class PackageDetails extends Component {
                                             <div className="tab-content-2">
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <div className="p-timeline-overview">
+                                                        {/*<div className="p-timeline-overview">
                                                             <h5>Overview</h5>
                                                             <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus.</p>
-                                                        </div>
+                                                        </div>*/}
                                                         <ul className="p-timeline">
+                                                        {currentPackage[0].daysDetails.map((data, key) => {
+                                                            return (
                                                             <li>
                                                                 <div className="timeline-index">
                                                                     <div className="index-circle">
-                                                                        <h5>01</h5>
+                                                                        <h5>{key+1}</h5>
                                                                     </div>
                                                                 </div>
                                                                 <div className="timeline-content">
-                                                                    <h5>DAY 1 : Departure And Small Tour</h5>
-                                                                    <strong>10.00 AM to 10.00 PM</strong>
-                                                                    <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.</p>
-                                                                    <ul>
+                                                                    <h5>{data.title}</h5>
+                                                                    {/*<strong>10.00 AM to 10.00 PM</strong>*/}
+                                                                    <p>{data.description}</p>
+                                                                    {/*<ul>
                                                                         <li /><li><i className="bx bx-check" />Specilaized Bilingual Guide</li>
                                                                         <li /><li><i className="bx bx-check" />Private Transport</li>
                                                                         <li /><li><i className="bx bx-check" />Entrance Fees</li>
                                                                         <li /><li><i className="bx bx-check" />Box Lunch,Water,Dinner and Snacks</li>
-                                                                    </ul>
+                                                                    </ul>*/}
                                                                 </div>
                                                             </li>
-                                                            <li>
-                                                                <div className="timeline-index">
-                                                                    <div className="index-circle">
-                                                                        <h5>02</h5>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="timeline-content">
-                                                                    <h5>DAY 2 : Departure And Small Tour</h5>
-                                                                    <strong>10.00 AM to 10.00 PM</strong>
-                                                                    <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.</p>
-                                                                    <ul>
-                                                                        <li /><li><i className="bx bx-check" />Specilaized Bilingual Guide</li>
-                                                                        <li /><li><i className="bx bx-check" />Private Transport</li>
-                                                                        <li /><li><i className="bx bx-check" />Entrance Fees</li>
-                                                                        <li /><li><i className="bx bx-check" />Box Lunch,Water,Dinner and Snacks</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div className="timeline-index">
-                                                                    <div className="index-circle">
-                                                                        <h5>03</h5>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="timeline-content">
-                                                                    <h5>DAY 3 : Departure And Small Tour</h5>
-                                                                    <strong>10.00 AM to 10.00 PM</strong>
-                                                                    <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.</p>
-                                                                    <ul>
-                                                                        <li /><li><i className="bx bx-check" />Specilaized Bilingual Guide</li>
-                                                                        <li /><li><i className="bx bx-check" />Private Transport</li>
-                                                                        <li /><li><i className="bx bx-check" />Entrance Fees</li>
-                                                                        <li /><li><i className="bx bx-check" />Box Lunch,Water,Dinner and Snacks</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div className="timeline-index">
-                                                                    <div className="index-circle">
-                                                                        <h5>04</h5>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="timeline-content">
-                                                                    <h5>DAY 4 : Departure And Small Tour</h5>
-                                                                    <strong>10.00 AM to 10.00 PM</strong>
-                                                                    <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.</p>
-                                                                    <ul>
-                                                                        <li /><li><i className="bx bx-check" />Specilaized Bilingual Guide</li>
-                                                                        <li /><li><i className="bx bx-check" />Private Transport</li>
-                                                                        <li /><li><i className="bx bx-check" />Entrance Fees</li>
-                                                                        <li /><li><i className="bx bx-check" />Box Lunch,Water,Dinner and Snacks</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div className="timeline-index">
-                                                                    <div className="index-circle">
-                                                                        <h5>05</h5>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="timeline-content">
-                                                                    <h5>DAY 5 : Departure And Small Tour</h5>
-                                                                    <strong>10.00 AM to 10.00 PM</strong>
-                                                                    <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.</p>
-                                                                    <ul>
-                                                                        <li /><li><i className="bx bx-check" />Specilaized Bilingual Guide</li>
-                                                                        <li /><li><i className="bx bx-check" />Private Transport</li>
-                                                                        <li /><li><i className="bx bx-check" />Entrance Fees</li>
-                                                                        <li /><li><i className="bx bx-check" />Box Lunch,Water,Dinner and Snacks</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
+                                                            );
+                                                        })}
                                                         </ul>
                                                     </div>
                                                 </div>

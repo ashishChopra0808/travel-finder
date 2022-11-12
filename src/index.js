@@ -13,6 +13,7 @@ import secondLayout                     from "./components/layouts/main-two";
 import Layout                           from "./components/app";
 
 //Import all page from components
+import homePage                          from "./components/pages/home/HomePage";
 import aboutUs                          from "./components/pages/about-us/AboutUs";
 import destinations                     from "./components/pages/destinations/Destinations";
 import packages                         from "./components/pages/package/Packages";
@@ -49,9 +50,10 @@ class Root extends React.Component{
         return(
             <BrowserRouter basename={"/"}>
                     <Switch>
-                        <Route exact path='/' component={defaultLayout} />
+                        <Route exact path='/sss' component={defaultLayout} />
                         <Route path={`${process.env.PUBLIC_URL}/home-page-2`} component={secondLayout} />
                         <Layout>
+                            <Route path={`${process.env.PUBLIC_URL}/home`} component={homePage} />
                             <Route path={`${process.env.PUBLIC_URL}/about-us`} component={aboutUs} />
                             <Route path={`${process.env.PUBLIC_URL}/destination`} component={destinations} />
                             <Route path={`${process.env.PUBLIC_URL}/discover-uae`} component={destinations} />

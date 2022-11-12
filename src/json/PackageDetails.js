@@ -1,6 +1,8 @@
 export const packagesData = [
     {
         title: '3 Nights / 4 Days Itinerary For Serbia',
+        tinyTitle: 'Itinerary For Serbia',
+        days: '3 Nights / 4 Days',
         slug: '3n-4d-itinerary-for-serbia',
         daysDetails: [
             {
@@ -23,6 +25,8 @@ export const packagesData = [
     },
     {
         title: '3 Nights / 4 Days Itinerary For Georgia',
+        tinyTitle: 'Itinerary For Georgia',
+        days: '3 Nights / 4 Days',
         slug: '3n-4d-itinerary-for-georgia',
         daysDetails: [
             {
@@ -45,6 +49,8 @@ export const packagesData = [
     },
     {
         title: 'Georgia Winter Special 5 Nights / 6 Days',
+        tinyTitle: 'Georgia Winter Special',
+        days: '5 Nights / 6 Days',
         slug: 'georgia-winter-special-5n-6d',
         daysDetails: [
             {
