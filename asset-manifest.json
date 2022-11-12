@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/travel-finder/static/css/main.c319f042.chunk.css",
-    "main.js": "/travel-finder/static/js/main.7bd75098.chunk.js",
-    "main.js.map": "/travel-finder/static/js/main.7bd75098.chunk.js.map",
+    "main.js": "/travel-finder/static/js/main.e9036da0.chunk.js",
+    "main.js.map": "/travel-finder/static/js/main.e9036da0.chunk.js.map",
     "runtime-main.js": "/travel-finder/static/js/runtime-main.c3db0bb2.js",
     "runtime-main.js.map": "/travel-finder/static/js/runtime-main.c3db0bb2.js.map",
     "static/css/2.41d0c2ec.chunk.css": "/travel-finder/static/css/2.41d0c2ec.chunk.css",
@@ -129,6 +129,6 @@
     "static/css/2.41d0c2ec.chunk.css",
     "static/js/2.895c9380.chunk.js",
     "static/css/main.c319f042.chunk.css",
-    "static/js/main.7bd75098.chunk.js"
+    "static/js/main.e9036da0.chunk.js"
   ]
 }
